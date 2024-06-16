@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "common-py"
+version = "0.1.0"
+description = ""
+authors = ["Jake Stanley <prudentia713@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+appdirs = "^1.4.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
