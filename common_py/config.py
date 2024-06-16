@@ -8,11 +8,11 @@ def GetConfigPath(app_name: str) -> str:
     os.makedirs(config_dir, exist_ok=True)
     return os.path.join(config_dir, "config.json")
 
-def LoadConfig(app_name: str) -> dict:
+def LoadConfig(app_name: str, default_config={}) -> dict:
 
     config_path = GetConfigPath(app_name)
     if os.path.exists(config_path):
         with open(config_path, "r") as f:
             return json.load(f)
     else:
-        return {}
+        return default_config
